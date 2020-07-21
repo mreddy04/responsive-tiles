@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family:Verdana;
+    background-color:#e5e5e5;
+}
+header {
+    padding:5px;
+    text-align:center;
+}
+
+.cards-section {
+    float: left;
+    width: 75%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 0px;
+}
+.button-section {
+    float: right;
+    width: 25%;
+    padding: 0 20px;
+}
+.cards-section .cards {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.cards-section .cards .card-color {
+    height: 200px;
+    width: 100%;
+    display: flex;
+}
+.cards-section .cards .card-color .title-index {
+    color: white;
+    font-size: 80px;
+    margin: 0px;
+    margin: auto;
+}
+
+.cards-section .cards:nth-child(1) .card-color {
+    background: #6F98A8;
+}
+.cards-section .cards:nth-child(2) .card-color {
+    background: #2B8EAD;
+}
+.cards-section .cards:nth-child(3) .card-color {
+    background: #333333;
+}
+.cards-section .cards:nth-child(4) .card-color {
+    background: #007c8c;
+}
+.cards-section .cards:nth-child(5) .card-color {
+    background: #000000;
+}
+.cards-section .cards:nth-child(6) .card-color {
+    background: #BFBFBF;
+}
+.cards-section .cards:nth-child(7) .card-color {
+    background: #EFEFEF;
+}
+.cards-section .cards:nth-child(8) .card-color {
+    background: #72C3DC;
+}
+.cards-section .cards:nth-child(9) .card-color {
+    background: #2F454E;
+}
+
+footer {
+    clear: both;
+    padding:10px;
+    text-align:center;
+}
+button {
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    background-color: #6cc3d6;
+    border: 1px solid #6cc3d6;
+    border-radius: 4px;
+    box-shadow: 0px 3px 2px 0px #055961;
+    color: #fff;
+    text-transform: uppercase;
+}
+.button-section button  {
+    display: block;
+}
+@media only screen and (max-width:375px) {
+    /* For mobile phones: */
+    .button-section,
+    .cards-section {
+        width: 100%;
+    }
+    .cards-section .cards {
+        height: 40px;
+        margin-top: 5px;
+    }
+    .cards-section .cards .card-color {
+        background-color: #ffffff;
+        height: 40px;
+        border-left: 5px solid #ff0000;
+    }
+
+    .cards-section .cards:nth-child(1) .card-color {
+        border-left: 5px solid #6F98A8;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(2) .card-color {
+        border-left: 5px solid #2B8EAD;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(3) .card-color {
+        border-left: 5px solid #333333;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(4) .card-color {
+        border-left: 5px solid #007c8c;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(5) .card-color {
+        border-left: 5px solid #000000;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(6) .card-color {
+        border-left: 5px solid #BFBFBF;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(7) .card-color {
+        border-left: 5px solid #EFEFEF;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(8) .card-color {
+        border-left: 5px solid #72C3DC;
+        background: #ffffff;
+    }
+
+    .cards-section .cards:nth-child(9) .card-color {
+        border-left: 5px solid #2F454E;
+        background: #ffffff;
+    }
+    .cards-section .cards .card-color .title-index {
+        color: black;
+        font-size: 18px;
+    }
+    .button-section {
+        display: flex;
+        justify-content: center;
+    }
+}
