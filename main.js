@@ -35,6 +35,7 @@ function appendElements(isRandom) {
     items.forEach((index) => {
         let cards = document.createElement("div");
         cards.classList.add("cards");
+        cards.classList.add("card_"+index);
         let cardsColor = document.createElement("div");
         cardsColor.classList.add("card-color");
         let number = document.createElement("p");

@@ -8,6 +8,14 @@ body {
 header {
     padding:5px;
     text-align:center;
+    border-bottom: 4px solid #bfbfbf;
+}
+header h4 {
+    margin: 10px 0;
+}
+#main-content {
+    background-color: #EFEFEF;
+    margin: 0 auto;
 }
 
 .cards-section {
@@ -15,7 +23,7 @@ header {
     width: 75%;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0px;
 }
 .button-section {
@@ -40,32 +48,25 @@ header {
     margin: auto;
 }
 
-.cards-section .cards:nth-child(1) .card-color {
-    background: #6F98A8;
+.cards.card_1,
+.cards.card_8 {
+    background-color: #6f98a8;
 }
-.cards-section .cards:nth-child(2) .card-color {
-    background: #2B8EAD;
+
+.cards.card_2,
+.cards.card_4 {
+    background-color: #2b8ead;
 }
-.cards-section .cards:nth-child(3) .card-color {
-    background: #333333;
+
+.cards.card_3,
+.cards.card_5,
+.cards.card_9 {
+    background-color: #2f454e;
 }
-.cards-section .cards:nth-child(4) .card-color {
-    background: #007c8c;
-}
-.cards-section .cards:nth-child(5) .card-color {
-    background: #000000;
-}
-.cards-section .cards:nth-child(6) .card-color {
-    background: #BFBFBF;
-}
-.cards-section .cards:nth-child(7) .card-color {
-    background: #EFEFEF;
-}
-.cards-section .cards:nth-child(8) .card-color {
-    background: #72C3DC;
-}
-.cards-section .cards:nth-child(9) .card-color {
-    background: #2F454E;
+
+.cards.card_6,
+.cards.card_7 {
+    background-color: #bfbfbf;
 }
 
 footer {
@@ -87,11 +88,17 @@ button {
 .button-section button  {
     display: block;
 }
-@media only screen and (max-width:375px) {
+@media only screen and (max-width:470px) {
     /* For mobile phones: */
+    header {
+        background-color: #000000;
+        color: #ffffff;
+        border-bottom: none;
+    }
     .button-section,
     .cards-section {
         width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
     .cards-section .cards {
         height: 40px;
@@ -100,53 +107,29 @@ button {
     .cards-section .cards .card-color {
         background-color: #ffffff;
         height: 40px;
-        border-left: 5px solid #ff0000;
     }
 
-    .cards-section .cards:nth-child(1) .card-color {
-        border-left: 5px solid #6F98A8;
-        background: #ffffff;
+    .cards-section .cards.card_1,
+    .cards-section .cards.card_8 {
+        border-left: 5px solid #6f98a8;
     }
 
-    .cards-section .cards:nth-child(2) .card-color {
-        border-left: 5px solid #2B8EAD;
-        background: #ffffff;
+    .cards-section .cards.card_2,
+    .cards-section .cards.card_4 {
+        border-left: 5px solid #2b8ead;
     }
 
-    .cards-section .cards:nth-child(3) .card-color {
-        border-left: 5px solid #333333;
-        background: #ffffff;
+    .cards-section .cards.card_3,
+    .cards-section .cards.card_5,
+    .cards-section .cards.card_9 {
+        border-left: 5px solid #2f454e;
     }
 
-    .cards-section .cards:nth-child(4) .card-color {
-        border-left: 5px solid #007c8c;
-        background: #ffffff;
+    .cards-section .cards.card_6,
+    .cards-section .cards.card_7 {
+        border-left: 5px solid #bfbfbf;
     }
 
-    .cards-section .cards:nth-child(5) .card-color {
-        border-left: 5px solid #000000;
-        background: #ffffff;
-    }
-
-    .cards-section .cards:nth-child(6) .card-color {
-        border-left: 5px solid #BFBFBF;
-        background: #ffffff;
-    }
-
-    .cards-section .cards:nth-child(7) .card-color {
-        border-left: 5px solid #EFEFEF;
-        background: #ffffff;
-    }
-
-    .cards-section .cards:nth-child(8) .card-color {
-        border-left: 5px solid #72C3DC;
-        background: #ffffff;
-    }
-
-    .cards-section .cards:nth-child(9) .card-color {
-        border-left: 5px solid #2F454E;
-        background: #ffffff;
-    }
     .cards-section .cards .card-color .title-index {
         color: black;
         font-size: 18px;
